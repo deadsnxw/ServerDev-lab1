@@ -1,8 +1,10 @@
-FROM openjdk:23
+FROM openjdk:17-jdk-alpine
 
 WORKDIR /app
 
 COPY . /app
+
+RUN chmod +x gradlew
 
 RUN ./gradlew build
 
